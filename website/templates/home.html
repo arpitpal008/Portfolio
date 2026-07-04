@@ -8,7 +8,7 @@ Home
 
 {% load static %}
 
-<section class="hero">
+<section class="hero " id="home">
 
     <div class="container">
 
@@ -16,36 +16,44 @@ Home
 
             <div class="col-lg-6">
 
-                <h5 class="text-primary">Hello, I'm</h5>
+                <h5 class="hero-greeting">Hello, I'm</h5>
 
                 <h1 class="display-4 fw-bold hero-name">
                     Arpit Pal
                 </h1>
 
-                <h3 class="text-secondary">
-                   Python Developer
-Django • Flask • SQL
+                <h3 class="hero-role">
+                    Python Backend Developer
                 </h3>
 
-                <p class="mt-3">
+                <p class="hero-tech">
+                    Django • Flask • SQL Server
+                </p>
+
+                <p class="hero-text">
                    Building scalable and responsive web applications using
 Python, Django, Flask and SQL.
                 </p>
 
-                <a href="#" class="btn btn-primary hero-btn me-3">
-                     View Projects
-                </a>
+           <div class="hero-buttons">
 
-                <a href="#" class="btn btn-outline-light hero-btn">
-                    Download Resume
-                </a>
+    <a href="#projects" class="btn btn-primary hero-btn">
+        View Projects
+    </a>
 
+    <a href="{% static 'resume/ArpitPal_Resume.pdf' %}"
+       class="btn btn-outline-light hero-btn"
+       download>
+        Download Resume
+    </a>
+
+</div>
             </div>
 
             <div class="col-lg-6 text-center">
             {% load static %}
             <img src="{% static 'images/profile.png' %}"
-                class="img-fluid rounded about-image"
+                class="img-fluid hero-image"
                 alt="Profile Image">
 
             </div>
@@ -58,11 +66,11 @@ Python, Django, Flask and SQL.
 
 <!-- About Section -->
 
-<section class="about">
+<section class="about " id="about">
 
     <div class="container">
 
-        <div class="row align-items-center">
+        <div class="row align-items-center g-5">
 
             <div class="col-lg-5 text-center">
 
@@ -83,19 +91,14 @@ Python, Django, Flask and SQL.
                    I am a Computer Science graduate passionate about backend development with Python and Django. I enjoy building scalable web applications, learning new technologies, and solving real-world problems through clean and efficient code.
                 </p>
 
-                <div class="about-skills mt-4">
+     <div class="about-skills">
 
-    <span class="badge bg-primary p-2 me-2 mb-2">Python</span>
-
-    <span class="badge bg-primary p-2 me-2 mb-2">Django</span>
-
-    <span class="badge bg-primary p-2 me-2 mb-2">SQL Server</span>
-
-    <span class="badge bg-primary p-2 me-2 mb-2">Bootstrap</span>
-
-    <span class="badge bg-primary p-2 me-2 mb-2">HTML</span>
-
-    <span class="badge bg-primary p-2 me-2 mb-2">CSS</span>
+    <span>Python</span>
+    <span>Django</span>
+    <span>SQL Server</span>
+    <span>Bootstrap</span>
+    <span>HTML</span>
+    <span>CSS</span>
 
 </div>
 
@@ -108,7 +111,7 @@ Python, Django, Flask and SQL.
 </section>
 
 <!-- Skills Section -->
-<section class="skills">
+<section class="skills" id="skills">
     <div class="container">
 
         <h2 class="text-center">My Skills</h2>
@@ -426,6 +429,9 @@ Python, Django, Flask and SQL.
 <div class="col-lg-6 mb-4">
 
          <div class="card project-card">
+        <img src="{% static 'images/projects/libaray.png' %}"
+         class="project-image"
+         alt="Library Management System">
 
         <div class="card-body">
 
@@ -463,6 +469,10 @@ Python, Django, Flask and SQL.
 
          <div class="card project-card">
 
+         <img src="{% static 'images/projects/aibot.png' %}"
+         class="project-image"
+         alt="AI ChatBot">
+
         <div class="card-body">
 
             <h3>AI ChatBot</h3>
@@ -494,6 +504,9 @@ Python, Django, Flask and SQL.
 <div class="col-lg-6 mb-4">
 
          <div class="card project-card">
+        <img src="{% static 'images/projects/assistant.png' %}"
+         class="project-image"
+         alt="AI Voice Assistant">
 
         <div class="card-body">
 
@@ -526,6 +539,9 @@ Python, Django, Flask and SQL.
 <div class="col-lg-6 mb-4">
 
          <div class="card project-card">
+        <img src="{% static 'images/projects/to-do.png' %}"
+         class="project-image"
+         alt="Flask Todo App">
 
         <div class="card-body">
 
@@ -558,6 +574,9 @@ Python, Django, Flask and SQL.
 <div class="col-lg-6 mb-4">
 
          <div class="card project-card">
+        <img src="{% static 'images/projects/spotify.png' %}"
+         class="project-image"
+         alt="Spotify Clone">
 
         <div class="card-body">
 
@@ -589,7 +608,10 @@ Python, Django, Flask and SQL.
 
 <div class="col-lg-6 mb-4">
 
-         <div class="card project-card">
+        <div class="card project-card">
+        <img src="{% static 'images/projects/netflix.png' %}"
+         class="project-image"
+         alt="Netflix Clone">
 
         <div class="card-body">
 
@@ -624,5 +646,251 @@ Python, Django, Flask and SQL.
 </section>
 
 
+<!-- Certificates Section -->
+
+<section class="certificates" id="certificates">
+
+    <div class="container">
+
+        <h2 class="text-center">Certificates</h2>
+
+        <p class="text-center certificate-subtitle">
+            Professional certifications that demonstrate my continuous learning and technical growth.
+        </p>
+
+        <div class="row">
+
+            <!-- Certificate Card 1 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="card certificate-card">
+
+                    <div class="card-body text-center">
+
+                        <h3>🏅</h3>
+
+                        <h4>Microsoft Azure AI Fundamentals (AI-900)</h4>
+
+                        <p>Microsoft</p>
+
+                        <a href="{% static 'certificates/ai900.pdf' %}"
+                        class="btn btn-primary"
+                        target="_blank">
+                            <i class="bi bi-file-earmark-pdf"></i> View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+              <!-- Certificate Card 2 -->
+
+<div class="col-lg-4 col-md-6 mb-4">
+
+    <div class="card certificate-card">
+
+        <div class="card-body text-center">
+
+            <h3>🐍</h3>
+
+            <h4>Python for Beginners</h4>
+
+            <p>Simplilearn</p>
+
+            <a href="{% static 'certificates/python-beginners.pdf' %}"
+               class="btn btn-primary"
+               target="_blank">
+                <i class="bi bi-file-earmark-pdf"></i> View Certificate
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+              <!-- Certificate Card 3 -->
+              <div class="col-lg-4 col-md-6 mb-4">
+
+    <div class="card certificate-card">
+
+        <div class="card-body text-center">
+
+            <h3>📊</h3>
+
+            <h4>Introduction to Data Science</h4>
+
+            <p>Infosys Springboard</p>
+
+            <a href="{% static 'certificates/data-science.pdf' %}"
+               class="btn btn-primary"
+               target="_blank">
+                <i class="bi bi-file-earmark-pdf"></i> View Certificate
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+ 
+<section class="contact " id="contact">
+
+    <div class="container">
+
+        <h2 class="text-center">Contact Me</h2>
+
+        <p class="text-center contact-subtitle">
+            Feel free to reach out for opportunities, collaborations or just to say hello.
+        </p>
+
+        <div class="row mt-5">
+
+            <!-- Left Side -->
+
+            <div class="col-lg-5 mb-4">
+
+                <div class="contact-info">
+
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        I'm always open to discussing new opportunities,
+                        freelance work or exciting projects.
+                    </p>
+
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:arpitpal008@gmail.com">
+                            arpitpal4554@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="bi bi-github"></i>
+                        <a href="https://github.com/arpitpal008"
+                        target="_blank">
+                            github.com/arpitpal008
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="bi bi-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/arpitpal008/"
+                        target="_blank">
+                            linkedin.com/in/arpitpal008
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Haridwar, Uttarakhand, India</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="col-lg-7">
+
+                {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+                <form method="POST" class="contact-form">
+
+    {% csrf_token %}
+
+    {% if success %}
+        <div class="alert alert-success">
+            ✅ Your message has been sent successfully.
+        </div>
+    {% endif %}
+
+    <input
+        type="text"
+        name="name"
+        class="form-control mb-3"
+        placeholder="Your Name"
+        required>
+
+    <input
+        type="email"
+        name="email"
+        class="form-control mb-3"
+        placeholder="Your Email"
+        required>
+
+    <textarea
+        name="message"
+        class="form-control mb-3"
+        rows="6"
+        placeholder="Your Message"
+        required></textarea>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="bi bi-send-fill"></i>
+        Send Message
+    </button>
+
+</form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    <div class="container text-center">
+
+        <h3>Arpit Pal</h3>
+
+        <p>Python Developer | Django Developer | Web Developer</p>
+
+        <div class="social-icons">
+
+            <a href="https://github.com/arpitpal008" target="_blank">
+                <i class="bi bi-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/arpitpal008/" target="_blank">
+                <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a href="mailto:arpitpal4554@gmail.com">
+                <i class="bi bi-envelope-fill"></i>
+            </a>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 Arpit Pal. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
 
 {% endblock %}
