@@ -1,0 +1,434 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center h-100">
+
+            <div class="col-lg-6">
+
+                <h5 class="text-primary">Hello, I'm</h5>
+
+                <h1 class="display-4 fw-bold hero-name">
+                    Arpit Pal
+                </h1>
+
+                <h3 class="text-secondary">
+                   Python Developer
+Django • Flask • SQL
+                </h3>
+
+                <p class="mt-3">
+                   Building scalable and responsive web applications using
+Python, Django, Flask and SQL.
+                </p>
+
+                <a href="#" class="btn btn-primary hero-btn me-3">
+                     View Projects
+                </a>
+
+                <a href="#" class="btn btn-outline-light hero-btn">
+                    Download Resume
+                </a>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+            {% load static %}
+            <img src="{% static 'images/profile.png' %}"
+                class="img-fluid rounded about-image"
+                alt="Profile Image">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section class="about">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5 text-center">
+
+              {% load static %}
+            <img src="{% static 'images/About.png' %}"
+                class="img-fluid rounded about-image"
+                alt="About Image">
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <h2 class="about-title">
+                    About Me
+                </h2>
+
+                <p class="about-text">
+                   I am a Computer Science graduate passionate about backend development with Python and Django. I enjoy building scalable web applications, learning new technologies, and solving real-world problems through clean and efficient code.
+                </p>
+
+                <div class="about-skills mt-4">
+
+    <span class="badge bg-primary p-2 me-2 mb-2">Python</span>
+
+    <span class="badge bg-primary p-2 me-2 mb-2">Django</span>
+
+    <span class="badge bg-primary p-2 me-2 mb-2">SQL Server</span>
+
+    <span class="badge bg-primary p-2 me-2 mb-2">Bootstrap</span>
+
+    <span class="badge bg-primary p-2 me-2 mb-2">HTML</span>
+
+    <span class="badge bg-primary p-2 me-2 mb-2">CSS</span>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Skills Section -->
+<section class="skills">
+    <div class="container">
+
+        <h2 class="text-center">My Skills</h2>
+
+        <!-- Programming Languages -->
+        <h3 class="skill-category">Programming Languages</h3>
+
+        <div class="row">
+            
+    <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/python.svg' %}" alt="Python" class="skill-icon">
+
+            <h4>Python</h4>
+
+            <p>
+                Backend Development
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+ <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/javascript.svg' %}" alt="JavaScript" class="skill-icon">
+
+            <h4>JavaScript</h4>
+
+            <p>
+                Interactive Web Development
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+ <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/html5.svg' %}" alt="HTML" class="skill-icon">
+
+            <h4>HTML</h4>
+
+            <p>
+                Web Structure
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+ <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/css3.svg' %}" alt="CSS" class="skill-icon">
+
+            <h4>CSS</h4>
+
+            <p>
+                Styling & Layout
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+ <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/sql.svg' %}" alt="Sql" class="skill-icon">
+
+            <h4>Sql</h4>
+
+            <p>
+                Database Query Language
+            </p>
+
+        </div>
+
+    </div>
+
+</div>  
+        </div>
+
+        <!-- Frameworks -->
+        <h3 class="skill-category mt-5">Frameworks & Libraries</h3>
+
+        <div class="row">
+            <!-- Django -->
+
+             <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/django.svg' %}" alt="Django" class="skill-icon">
+
+            <h4>Django </h4>
+
+            <p>
+                 Web Framework
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+            <!-- Flask -->
+
+<div class="col-md-4 mb-4">
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/flask.svg' %}" alt="Flask" class="skill-icon">
+
+            <h4>Flask</h4>
+
+            <p>
+                Lightweight Web Framework
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+            <!-- Bootstrap -->
+
+            
+ <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/bootstrap.svg' %}" alt="Bootstrap" class="skill-icon">
+
+            <h4>Bootstrap</h4>
+
+            <p>
+                Responsive UI
+            </p>
+
+        </div>
+
+    </div>
+
+        </div>
+
+        <!-- Databases -->
+        <h3 class="skill-category mt-5">Databases</h3>
+
+        <div class="row">
+            
+
+ <div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/mysql.svg' %}" alt="mysql" class="skill-icon">
+
+            <h4>MySql</h4>
+
+            <p>
+                Relational Database Management
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+            <!-- MsSQL server -->
+
+  
+<div class="col-md-4 mb-4">
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/microsoftsqlserver.svg' %}" alt="MicroSoft Sql Serve" class="skill-icon">
+
+            <h4>Microsoft SQL Server</h4>
+
+            <p>
+                Relational Database Management
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+        </div>
+
+        <!-- Tools -->
+        <h3 class="skill-category mt-5">Development Tools</h3>
+
+        <div class="row">
+            <!-- Git -->
+
+<div class="col-md-4 mb-4">
+
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/git.svg' %}" alt="Git"   class="skill-icon github">
+
+            <h4>Git</h4>
+
+            <p>
+                Version Control
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+            <!-- GitHub -->
+ <div class="col-md-4 mb-4">
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/github.svg' %}" alt="GitHub" class="skill-icon">
+
+            <h4>GitHub</h4>
+
+            <p>
+                Code Hosting & Collaboration
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- VS Code -->
+<div class="col-md-4 mb-4">
+    <div class="card skill-card">
+
+        <div class="card-body text-center">
+
+            <img src="{% static 'icons/vscode.svg' %}" alt="VSCode" class="skill-icon">
+
+            <h4>VSCode</h4>
+
+            <p>
+                Code Editor
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <h2 class="text-center">My Projects</h2>
+
+        <p class="text-center project-subtitle">
+            Here are some projects I have built using Python, Django, Flask and Web Technologies.
+        </p>
+
+        <div class="row">
+
+            <!-- Project Cards Here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+{% endblock %}

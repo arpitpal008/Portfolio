@@ -1,0 +1,167 @@
+/* For Global */
+body{
+    background-color:#0F172A;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* For Hero Section */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-name{
+    color:#38BDF8;
+    text-shadow:0 0 10px #38BDF8;
+}
+
+
+.hero-image{
+    border:4px solid #38BDF8;
+    box-shadow:0 0 25px #38BDF8;
+}
+
+
+.hero-btn{
+    padding:12px 28px;
+    border-radius:50px;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 15px #38BDF8;
+}
+
+
+
+/* About Section */
+
+.about{
+
+    padding:100px 0;
+
+}
+.about-title{
+    color:#38BDF8;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+.about-text{
+
+    color:#CBD5E1;
+
+    line-height:30px;
+
+    font-size:18px;
+
+}
+
+.about-image{
+
+    border-radius:20px;
+
+}
+
+
+/* Skills Section */
+
+
+
+.skills{
+    padding:100px 0;
+}
+
+.skill-card{
+    background:#1E293B;
+    color:white;
+    border:1px solid #38BDF8;
+    border-radius:15px;
+    min-height:240px;
+    transition:0.3s ease;
+    cursor:pointer;
+}
+
+.skill-card .card-body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #38BDF8;
+}
+.skills h2{
+    color:#38BDF8;
+    font-weight:700;
+    margin-bottom:60px;
+}
+
+.skill-icon{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    margin-bottom:18px;
+    transition:0.3s ease;
+}
+
+.skill-card:hover .skill-icon{
+    transform:scale(1.15) rotate(5deg);
+}
+
+.skill-icon{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    margin-bottom:18px;
+}
+
+.skill-card h4{
+    font-size:20px;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:8px;
+}
+
+.skill-card p{
+    font-size:15px;
+    color:#CBD5E1;
+    margin-bottom:0;
+}
+
+.skill-category{
+    color:#38BDF8;
+    font-size:32px;
+    font-weight:700;
+    margin:60px 0 30px;
+    margin-bottom:35px;
+    border-left:5px solid #38BDF8;
+    padding-left:15px;
+}
+.skill-icon.github{
+    filter: invert(1);
+}
+
+/*======================
+      Projects
+=======================*/
+
+.projects{
+    padding:100px 0;
+}
+
+.projects h2{
+    color:#38BDF8;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.project-subtitle{
+    color:#94A3B8;
+    margin-bottom:60px;
+}
