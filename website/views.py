@@ -43,9 +43,8 @@ def home(request):
 
             except Exception as e:
                 return HttpResponse(str(e))
-            messages.success(request, "Your message has been sent successfully!")
-
-            return redirect("home")
+        messages.success(request, "Your message has been sent successfully!")
+        return redirect("home")
 
     return render(
         request,
