@@ -803,7 +803,7 @@ Python, Django, Flask and SQL.
 
             <div class="col-lg-7">
 
-                {% if messages %}
+{% if messages %}
     {% for message in messages %}
         <div class="alert alert-success">
             {{ message }}
@@ -814,12 +814,6 @@ Python, Django, Flask and SQL.
                 <form method="POST" class="contact-form">
 
     {% csrf_token %}
-
-    {% if success %}
-        <div class="alert alert-success">
-            ✅ Your message has been sent successfully.
-        </div>
-    {% endif %}
 
     <input
         type="text"
