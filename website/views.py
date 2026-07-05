@@ -4,6 +4,7 @@ from django.conf import settings
 from django.contrib import messages
 
 from .forms import ContactForm
+from django.http import HttpResponse
 
 
 def home(request):
@@ -20,30 +21,28 @@ def home(request):
             email = form.cleaned_data["email"]
             message = form.cleaned_data["message"]
 
-            send_mail(
-                subject=f"Portfolio Contact from {name}",
+            try:
+                send_mail(
+                    subject=f"Portfolio Contact from {name}",
+                    message=f"""
+        📩 New Portfolio Contact
 
-                message=f"""
-📩 New Portfolio Contact
+        👤 Name: {name}
+        📧 Email: {email}
 
---------------------------------
+        💬 Message:
+        {message}
+        """,
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER],
+                    fail_silently=False,
+                )
 
-👤 Name: {name}
+                messages.success(request, "Your message has been sent successfully!")
+                return redirect("home")
 
-📧 Email: {email}
-
---------------------------------
-
-💬 Message:
-
-{message}
-""",
-
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[settings.EMAIL_HOST_USER],
-                fail_silently=False,
-            )
-
+            except Exception as e:
+                return HttpResponse(str(e))
             messages.success(request, "Your message has been sent successfully!")
 
             return redirect("home")
